@@ -1,0 +1,17 @@
+name: Checkout Repos
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: checkout code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout tools repo
+        uses: actions/checkout@v2
+        with:
+          repository: silvanayousry/website_projects
